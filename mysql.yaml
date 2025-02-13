@@ -4,8 +4,8 @@
   tasks:
   - name: Install MYSQL libraries
     ansible.builtin.pip:
-      name: PyMySQL
-      excutable: pip3.9
+    name: PyMySQL
+    executable: pip3.9
 
   - name: install MYSQL server
     ansible.builtin.package:
@@ -24,7 +24,7 @@
       login_password: ExpenseApp@1
       login_host: mysql.ngdaws82s.fun
     register: mysql_info
-    
+
 
   - name: print the output
     ansible.builtin.debug:
