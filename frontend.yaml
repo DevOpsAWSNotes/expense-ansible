@@ -26,7 +26,7 @@
   - name: download the forntend code
     ansible.builtin.get_url:
       url: https://expense-builds.s3.us-east-1.amazonaws.com/expense-frontend-v2.zip
-      path: /tmp/forntend.zip
+      dest: /tmp/frontend.zip
   
   - name: Unzip frontend code
     ansible.builtin.unarchive:
