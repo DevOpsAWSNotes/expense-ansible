@@ -41,11 +41,12 @@
     ansible.builtin.copy:
       src: backend.service
       dest: /etc/systemd/system/backend.service
+
   - name: import mysql data
     community.mysql.mysql_db:
       state: import
       name: all
       login_user: root
       login_password: ExpenseApp@1
-      local_host: mysql.ngdaws82s.fun
+      login_host: mysql.ngdaws82s.fun
       target: /app/schema/backend.sql
